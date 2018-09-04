@@ -17,7 +17,7 @@ public class Atendimento {
 	private Integer id;
 	
 	@Column
-	private Date dataConsulta;
+	private java.util.Date dataConsulta = new java.util.Date();
 
 	@ManyToOne
 	@JoinColumn(name="id_paciente", nullable=false)
@@ -31,11 +31,11 @@ public class Atendimento {
 		return id;
 	}
 
-	public Date getDataConsulta() {
+	public java.util.Date getDataConsulta() {
 		return dataConsulta;
 	}
 
-	public void setDataConsulta(Date dataConsulta) {
+	public void setDataConsulta(java.util.Date dataConsulta) {
 		this.dataConsulta = dataConsulta;
 	}
 
